@@ -5,7 +5,6 @@
 {% block content %}
 
 <div class="cards-container">
-    <h1>Doctors</h1>
     {% for doctor in doctors %}
     <div class="card">
         <h2>{{ doctor.user.first_name }} {{ doctor.user.last_name }}</h2>

@@ -22,7 +22,7 @@
                 <a href="{% url 'service_list' %}">Xizmatlar</a>
                 <a href="{% url 'my_bookings' %}">Mening bookinglarim</a>
                 {% if user.is_authenticated %}
-                    <a href="{% url 'profile' %}">Profil</a>
+                    <a href="{% url 'profile' %}">Profile</a>
                 {% else %}
                     <a href="{% url 'login' %}">Kirish</a>
                 {% endif %}

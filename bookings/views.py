@@ -5,11 +5,26 @@ from .models import Booking
 from doctors.models import Doctor
 from services.models import Service
 from django import forms
+from django.utils import timezone
+
 
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['service', 'date', 'time']
+        fields = ['doctor', 'service', 'date', 'time']
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date'}),
+            'time': forms.TimeInput(attrs={'type': 'time'}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        today = timezone.now().date()
+        self.fields['date'].widget.attrs['min'] = today  
+        self.fields['time'].widget.attrs['min'] = "09:00"
+        self.fields['time'].widget.attrs['max'] = "20:00"
+        self.fields['time'].widget.attrs['step'] = 900 
+
 
 @login_required
 def create_booking(request, doctor_id):
@@ -25,6 +40,7 @@ def create_booking(request, doctor_id):
     else:
         form = BookingForm()
     return render(request, 'bookings/create_booking.html', {'form': form, 'doctor': doctor})
+
 
 @login_required
 def my_bookings(request):
