@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Doctor Detail{% endblock %}
+
+{% block content %}
+<div class="doctor-detail">
+    <h1>{{ doctor.user.first_name }} {{ doctor.user.last_name }}</h1>
+    <p><strong>Specialization:</strong> {{ doctor.specialization }}</p>
+    <p>{{ doctor.bio }}</p>
+    <a href="{% url 'create_booking' doctor.id %}" class="btn">Book Appointment</a>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Service Detail{% endblock %}
+
+{% block content %}
+<div class="service-detail">
+    <h1>{{ service.name }}</h1>
+    <p><strong>Doctor:</strong> {{ service.doctor.user.first_name }} {{ service.doctor.user.last_name }}</p>
+    <p><strong>Duration:</strong> {{ service.duration }} mins</p>
+    <p><strong>Price:</strong> ${{ service.price }}</p>
+</div>
+{% endblock %}

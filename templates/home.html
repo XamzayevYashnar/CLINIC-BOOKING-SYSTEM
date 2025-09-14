@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Welcome to Clinic Booking System</h1>
+    <p>Book your appointments easily with our professional doctors!</p>
+    <a href="{% url 'doctor_list' %}" class="btn">See Doctors</a>
+    <a href="{% url 'service_list' %}" class="btn">See Services</a>
+</div>
+{% endblock %}

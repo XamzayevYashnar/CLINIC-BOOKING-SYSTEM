@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Clinic Booking{% endblock %}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="{% static 'js/main.js' %}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'doctor_list' %}">Doktorlar</a>
+                <a href="{% url 'service_list' %}">Xizmatlar</a>
+                <a href="{% url 'my_bookings' %}">Mening bookinglarim</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}">Profil</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Kirish</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Clinic Booking System. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}My Bookings{% endblock %}
+
+{% block content %}
+<h1>My Bookings</h1>
+
+{% if bookings %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Doctor</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.doctor.user.first_name }} {{ booking.doctor.user.last_name }}</td>
+            <td>{{ booking.service.name }}</td>
+            <td>{{ booking.date }}</td>
+            <td>{{ booking.time }}</td>
+            <td>{{ booking.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>Sizda hech qanday broningiz yo‘q.</p>
+{% endif %}
+
+{% endblock %}
