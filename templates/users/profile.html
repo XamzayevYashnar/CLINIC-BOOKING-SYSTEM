@@ -5,22 +5,45 @@
 {% block content %}
 <div class="profile-container">
     <h1>Profile</h1>
-    <ul>
+
+    <!-- User muhim info -->
+    <ul class="user-info">
         <li><strong>Username:</strong> {{ user.username }}</li>
-        <li><strong>First Name:</strong> {{ user.first_name }}</li>
-        <li><strong>Last Name:</strong> {{ user.last_name }}</li>
-        <li><strong>Email:</strong> {{ user.email }}</li>
         <li><strong>Role:</strong> 
-            {% if user.is_doctor %}Doctor{% elif user.is_patient %}Patient{% else %}User{% endif %}
+            {% if user.is_superuser %}Admin
+            {% elif user.is_staff %}Staff
+            {% elif user.is_doctor %}Doctor
+            {% elif user.is_patient %}Patient
+            {% else %}User
+            {% endif %}
         </li>
+        <li><strong>Doctor:</strong> {{ user.is_doctor }}</li>
+        <li><strong>Patient:</strong> {{ user.is_patient }}</li>
+        <li><strong>Date Joined:</strong> {{ user.date_joined }}</li>
+        <li><strong>Last Login:</strong> {{ user.last_login }}</li>
+        <li><strong>Active:</strong> {{ user.is_active }}</li>
     </ul>
-    <div class="profile-buttons">
-        {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}" class="btn">Logout</a>
-        {% else %}
-            <a href="{% url 'login' %}" class="btn">Login</a>
-        {% endif %}
-        <a href="{% url 'home' %}" class="btn">Back</a>
-    </div>
+
+    <!-- Edit mumkin bo'lgan form, boshlang‘ichda yashirilgan -->
+    <button id="edit-btn" class="btn">Edit</button>
+    <form method="post" id="edit-form" style="display:none;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Save</button>
+        <button type="button" id="cancel-btn" class="btn">Cancel</button>
+    </form>
+
 </div>
+
+<script>
+document.getElementById('edit-btn').addEventListener('click', function() {
+    document.getElementById('edit-form').style.display = 'block';
+    this.style.display = 'none';
+});
+
+document.getElementById('cancel-btn').addEventListener('click', function() {
+    document.getElementById('edit-form').style.display = 'none';
+    document.getElementById('edit-btn').style.display = 'inline-block';
+});
+</script>
 {% endblock %}

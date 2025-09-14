@@ -1,35 +1,39 @@
 {% extends 'base.html' %}
 
-{% block title %}My Bookings{% endblock %}
+{% block title %}Mening Bronlarim{% endblock %}
 
 {% block content %}
-<h1>My Bookings</h1>
+<h1>Mening Bronlarim</h1>
 
-{% if bookings %}
-<table class="table">
-    <thead>
-        <tr>
-            <th>Doctor</th>
-            <th>Service</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for booking in bookings %}
-        <tr>
-            <td>{{ booking.doctor.user.first_name }} {{ booking.doctor.user.last_name }}</td>
-            <td>{{ booking.service.name }}</td>
-            <td>{{ booking.date }}</td>
-            <td>{{ booking.time }}</td>
-            <td>{{ booking.status }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+{% if user.is_authenticated %}
+    {% if bookings %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Shifokor</th>
+                    <th>Xizmat</th>
+                    <th>Sana</th>
+                    <th>Vaqt</th>
+                    <th>Holat</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.doctor.user.first_name }} {{ booking.doctor.user.last_name }}</td>
+                    <td>{{ booking.service.name }}</td>
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.time }}</td>
+                    <td>{{ booking.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Sizda hech qanday broningiz yo‘q.</p>
+    {% endif %}
 {% else %}
-<p>Sizda hech qanday broningiz yo‘q.</p>
+    <p>Siz tizimga kirmagansiz. Iltimos, <a href="{% url 'login' %}">kirish</a> yoki <a href="{% url 'register' %}">ro‘yxatdan o‘tish</a> orqali davom eting.</p>
 {% endif %}
 
 {% endblock %}

@@ -508,3 +508,667 @@ a {
         max-width: 90%;
     }
 }
+
+/* =======================
+   Service Cards
+======================= */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card strong {
+    color: #00BFFF;
+}
+
+.card .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #4CAF50, #00BFFF);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card .btn:hover {
+    background: linear-gradient(90deg, #45a049, #009acd);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/* =======================
+   Doctor Cards
+======================= */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card img.doctor-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #004080;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card strong {
+    color: #00BFFF;
+}
+
+.card .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #4CAF50, #00BFFF);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card .btn:hover {
+    background: linear-gradient(90deg, #45a049, #009acd);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card img.doctor-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* About Us Section */
+.about-container, .chilonzor-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #f0f8ff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-container:hover, .chilonzor-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.about-image, .chilonzor-image {
+    width: 45%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.about-text, .chilonzor-text {
+    width: 50%;
+}
+
+.about-text h2, .chilonzor-text h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.about-text p, .chilonzor-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container, .chilonzor-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image, .chilonzor-image, .about-text, .chilonzor-text {
+        width: 90%;
+    }
+}
+
+/* About Us & Chilonzor Sections */
+.about-container, .chilonzor-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #f0f8ff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-container:hover, .chilonzor-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.about-text h2, .chilonzor-text h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.about-text p, .chilonzor-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container, .chilonzor-container {
+        padding: 20px;
+    }
+
+    .about-text h2, .chilonzor-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p, .chilonzor-text p {
+        font-size: 15px;
+    }
+}
+
+/* Home Container */
+.home-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+/* About Us Section */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 900px;
+    margin: 50px auto;
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+.about-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Chilonzor Section (Text only) */
+.chilonzor-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #e6f2ff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+.chilonzor-text h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.chilonzor-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        margin-right: 0;
+    }
+}
+
+/* Home Container */
+.home-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+/* About Us Section */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 900px;
+    margin: 50px auto;
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+.about-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Chilonzor Section */
+.chilonzor-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 900px;
+    margin: 50px auto;
+    background: #e6f2ff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+.chilonzor-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.chilonzor-text h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.chilonzor-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #4CAF50, #00BFFF);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #45a049, #009acd);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}   
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container, .chilonzor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image, .chilonzor-image {
+        margin-right: 0;
+    }
+}
+
+/* service_detail.css */
+
+/* Umumiy container */
+.service-detail {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effekti: container biroz kattalashadi va soyaga ega bo‘ladi */
+.service-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Sarlavha */
+.service-detail h1 {
+    font-size: 2.2em;
+    color: #222;
+    margin-bottom: 25px;
+    text-align: center;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Paragraflar */
+.service-detail p {
+    font-size: 1.1em;
+    margin: 12px 0;
+    color: #444;
+    padding: 10px 15px;
+    border-left: 4px solid #ff7e5f;
+    transition: background 0.3s;
+}
+
+/* Hover effekti: paragraf fonini yengil rangga o‘zgartirish */
+.service-detail p:hover {
+    background-color: rgba(255, 126, 95, 0.1);
+    border-left-color: #feb47b;
+}
+
+/* Labellar (Doctor, Duration, Price) */
+.service-detail p strong {
+    color: #222;
+}
+
+/* Responsive dizayn */
+@media (max-width: 768px) {
+    .service-detail {
+        padding: 25px 20px;
+        margin: 30px 15px;
+    }
+
+    .service-detail h1 {
+        font-size: 1.8em;
+    }
+
+    .service-detail p {
+        font-size: 1em;
+    }
+}
+
+/* profile.css */
+
+/* Container */
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.profile-container h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #222;
+    background: linear-gradient(90deg, #42a5f5, #478ed1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* List */
+.profile-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-container li {
+    font-size: 1.1em;
+    margin: 12px 0;
+    padding: 10px 15px;
+    border-left: 4px solid #42a5f5;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hover effect for list items */
+.profile-container li:hover {
+    background-color: rgba(66, 165, 245, 0.1);
+    border-left-color: #478ed1;
+}
+
+/* Editable fields */
+.profile-container li span.editable {
+    padding: 3px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.profile-container li span.editable:hover {
+    background-color: rgba(66, 165, 245, 0.2);
+}
+
+/* Buttons */
+.profile-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.profile-buttons .btn {
+    padding: 10px 20px;
+    background-color: #42a5f5;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.profile-buttons .btn:hover {
+    background-color: #478ed1;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 25px 20px;
+        margin: 30px 15px;
+    }
+
+    .profile-container h1 {
+        font-size: 1.8em;
+    }
+
+    .profile-container li {
+        font-size: 1em;
+    }
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.profile-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-buttons .btn {
+    padding: 8px 15px;
+    background-color: #42a5f5;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.profile-buttons .btn:hover {
+    background-color: #1e88e5;
+}

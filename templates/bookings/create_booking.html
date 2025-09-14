@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}Book Appointment{% endblock %}
+{% block title %}Uchrashuvni Belgilash{% endblock %}
 
 {% block content %}
 <div class="form-container">
-    <h1>Book Appointment with {{ doctor.user.first_name }} {{ doctor.user.last_name }}</h1>
+    <h1>{{ doctor.user.first_name }} {{ doctor.user.last_name }} bilan uchrashuvni belgilang</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn">Book Now</button>
+        <button type="submit" class="btn">Hozir Belgilash</button>
     </form>
 </div>
 
 <style>
-    
+    /* Shu yerga kerak bo‘lsa CSS qo‘shishingiz mumkin */
 </style>
 {% endblock %}

@@ -1,21 +1,30 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Bosh sahifa{% endblock %}
 
 {% block content %}
 <div class="home-container">
-    <h1>Welcome to Clinic Booking System</h1>
-    <p>Book your appointments easily with our professional doctors!</p>
-    <a href="{% url 'doctor_list' %}" class="btn">See Doctors</a>
-    <a href="{% url 'service_list' %}" class="btn">See Services</a>
+    <h1>Klinika Yozuv Tizimiga Xush Kelibsiz</h1>
+    <p>Bizning professional shifokorlarimiz bilan uchrashuvlaringizni osonlik bilan belgilang!</p>
+    <a href="{% url 'doctor_list' %}" class="btn">Shifokorlar Ro‘yxati</a>
+    <a href="{% url 'service_list' %}" class="btn">Xizmatlar Ro‘yxati</a>
 </div>
 
-<!-- About Us Section -->
+<!-- Biz haqimizda bo‘limi rasm bilan -->
 <div class="about-container">
-    <img src="https://vitalehastanesi.com/wp-content/uploads/2020/12/dahiliye.jpg" alt="Clinic" class="about-image">
+    <img src="https://vitalehastanesi.com/wp-content/uploads/2020/12/dahiliye.jpg" alt="Klinika" class="about-image">
     <div class="about-text">
         <h2>Biz haqimizda</h2>
-        <p>Biz zamonaviy tibbiy xizmatni yaqinlashtirayotgan jamoamiz. Har bir bemor o‘z vaqtida, ortiqcha navbatsiz va qulay usulda shifokor bilan bog‘lanishi mumkin.</p>
+        <p>Biz zamonaviy tibbiy xizmatni bemorlarga yaqinlashtirayotgan jamoamiz. Har bir bemor o‘z vaqtida, ortiqcha navbatsiz va qulay usulda shifokor bilan bog‘lanishi mumkin.</p>
+    </div>
+</div>
+
+<!-- Chilonzor bo‘limi rasm bilan -->
+<div class="chilonzor-container">
+    <img src="https://avatars.mds.yandex.net/get-altay/6527792/2a0000018fa99cd1e946c29992ade8a2ff53/L_height" alt="Chilonzor" class="chilonzor-image">
+    <div class="chilonzor-text">
+        <h2>Chilonzor Mavzesi</h2>
+        <p>Bizning klinika Chilonzor mavzesida joylashgan bo‘lib, qulay transport yo‘llari va bemorlar uchun keng imkoniyatlar bilan xizmat ko‘rsatadi. Siz bemoringizni osonlik bilan yozib qo‘yishingiz mumkin.</p>
     </div>
 </div>
 {% endblock %}
